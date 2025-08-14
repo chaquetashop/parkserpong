@@ -63,20 +63,10 @@
             display: flex;
             align-items: center;
         }
-        
+
         .logo img {
-            height: 40px;
+            height: 45px;
             margin-right: 10px;
-        }
-        
-        .logo-text {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-        
-        .logo-text span {
-            color: var(--secondary);
         }
         
         .nav-toggle {
@@ -294,6 +284,33 @@
                 transform: translateY(0);
             }
         }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .highlight-card {
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
         
         /* Property Highlights */
         .highlights {
@@ -301,24 +318,16 @@
             padding: 60px 0;
             text-align: center;
         }
-        
-        .highlight-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
         }
         
-        .highlight-card {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         
         .highlight-card:hover {
             transform: translateY(-10px);
@@ -914,7 +923,8 @@
 </head>
 <body>
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6281210020088" class="whatsapp-float" target="_blank" aria-label="Hubungi kami via WhatsApp">
+    <a href="https://wa.me/6285960239731?text=Halo%20saya%20ingin%20mengetahui%20lebih%20lanjut%20info%20mengenai%20rumah%20di%20park%20serpong%20tahap%205" 
+        class="whatsapp-float" target="_blank" aria-label="Hubungi kami via WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
     
@@ -922,7 +932,7 @@
     <header>
         <div class="header-container container">
             <div class="logo">
-                <div class="logo-text">PARK<span>SERPONG</span></div>
+                <img src="./assets/park-serpong-logo.png" alt="Park Serpong Logo">
             </div>
             
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -1099,40 +1109,53 @@
     </section>
     
         <!-- Property Highlights -->
-    <section class="highlights">
-        <div class="container">
-            <div class="section-title">
-                <h2>Koleksi Video Hi-5</h2>
-                <p>Jelajahi contoh desain rumah kami secara virtual.</p>
-            </div>
-            
-            <div class="highlight-grid">
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="fas fa-tag"></i>
-                    </div>
-                    <h3>Harga Terjangkau</h3>
-                    <p>Mulai dari Rp 393 Juta</p>
+        <section class="highlights">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Koleksi Video Hi-5</h2>
+                    <p>Jelajahi contoh desain rumah kami secara virtual.</p>
                 </div>
                 
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="fas fa-road"></i>
+                <div class="highlight-grid">
+                    <div class="highlight-card">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/gt4xMcRPxks" 
+                                title="Gold Livin" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h3>Gold Livin</h3>
                     </div>
-                    <h3>Akses Strategis</h3>
-                    <p>5-10 menit ke fasilitas utama</p>
-                </div>
                 
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="fas fa-swimming-pool"></i>
+                    <div class="highlight-card">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/sAGQWQJC-cc" 
+                                title="Gold Top Livin" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h3>Gold Top Livin</h3>
                     </div>
-                    <h3>Fasilitas Lengkap</h3>
-                    <p>Rekreasi, pendidikan & kesehatan</p>
+                
+                    <div class="highlight-card">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube.com/embed/SIAHNvLL4gU" 
+                                title="Tree Top" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h3>Tree Top</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
 
     <!-- Amenities Section -->
     <section class="amenities" id="amenities">
@@ -1199,9 +1222,12 @@
                     </div>
                     <h3>WhatsApp Konsultan</h3>
                     <p>Tim ahli kami siap menjawab semua pertanyaan Anda</p>
-                    <a href="https://wa.me/6281210020088" class="whatsapp-button" target="_blank">
+                    <a href="https://wa.me/6285960239731?text=Halo%20saya%20ingin%20mengetahui%20lebih%20lanjut%20info%20mengenai%20rumah%20di%20park%20serpong%20tahap%205" 
+                        class="whatsapp-button" 
+                        target="_blank">
                         <i class="fab fa-whatsapp"></i> Chat Sekarang
                     </a>
+                 
                 </div>
             </div>
         </div>
