@@ -14,6 +14,9 @@
             --dark: #2d3748;
             --gray: #718096;
         }
+        :root { --header-h: 70px; }           /* keep this in sync with your header height */
+        html { scroll-behavior: smooth; }      /* native smooth scroll */
+        section { scroll-margin-top: calc(var(--header-h) + 20px); } /* avoid content hidden under header */
         
         * {
             margin: 0;
@@ -293,7 +296,31 @@
 
         .highlight-card {
             text-align: center;
+            transform: translateY(0);
+            transition: transform .3s ease, box-shadow .3s ease;
+            will-change: transform;
         }
+        
+        /* Apply underline effect to all but the last li */
+        nav ul li:not(:last-child) a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        nav ul li:not(:last-child) a:hover::after {
+            width: 100%;
+        }
+
+        /* Remove after effect for the last li completely */
+        nav ul li:last-child a::after {
+            content: none;
+        }
+
+
 
         .video-wrapper {
             position: relative;
@@ -946,7 +973,7 @@
                     <li><a href="#amenities">Fasilitas</a></li>
                     <li><a href="#location">Lokasi</a></li>
                     <li><a href="#contact">Kontak</a></li>
-                    <li><a href="#contact" class="cta-button">Konsultasi Gratis</a></li>
+                    <li><a href="#contact" class="cta-button" style="color:white !important">Konsultasi Gratis</a></li>
                 </ul>
             </nav>
         </div>
