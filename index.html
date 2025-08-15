@@ -28,6 +28,21 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .amenity-image {
+            width: 100%;
+            height: 200px; /* tinggi tetap untuk semua kartu */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .amenity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  /* ini bikin gambar fit dan menutupi area */
+            object-position: center; /* fokus di tengah */
+            display: block;
+        }
+
         
         body {
             font-family: 'Poppins', sans-serif;
@@ -968,7 +983,7 @@
     <header>
         <div class="header-container container">
             <div class="logo">
-                <img src="./assets/park-serpong-logo.png" alt="Park Serpong Logo">
+                <img src="./assets/park-serpong-logo.png" alt="logo parkserpong terbaru">
             </div>
             
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -1035,7 +1050,7 @@
                 <!-- TreeTops Livin -->
                 <div class="collection-card">
                     <div class="card-image">
-                        <img src="./assets/treetop.jpeg" alt="TreeTops Livin">
+                        <img src="./assets/treetop.jpeg" alt="Rumah Contoh TreeTops Living Park Serpong">
                     </div>
                     <div class="card-content">
                         <h3>TreeTops Livin</h3>
@@ -1071,7 +1086,7 @@
                    <!-- TreeTops Livin -->
                 <div class="collection-card" id="gold">
                     <div class="card-image">
-                        <img src="./assets/gold-livin.jpeg" alt="TreeTops Livin">
+                        <img src="./assets/gold-livin.jpeg" alt="Rumah Contoh Gold Livin Park Serpong">
                     </div>
                     <div class="card-content">
                         <h3>Gold Livin</h3>
@@ -1107,7 +1122,7 @@
                    <!-- TreeTops Livin -->
                 <div class="collection-card" id="goldtops">
                     <div class="card-image">
-                        <img src="./assets/gold-top-livin.jpeg" alt="TreeTops Livin">
+                        <img src="./assets/gold-top-livin.jpeg" alt="Rumah Contoh Top Livin Park Serpong">
                     </div>
                     <div class="card-content">
                         <h3>GoldTops Livin</h3>
@@ -1202,24 +1217,31 @@
             </div>
             
             <div class="amenities-grid" id="pendidikan">
+    
                 <div class="amenity-card">
-                    <div class="amenity-image" style="background-image: url('./assets/sekolah.png')"></div>
+                    <div class="amenity-image">
+                        <img src="./assets/sekolah.png" alt="Genesis Global Community School - Sekolah berkualitas dekat Park Serpong">
+                    </div>
                     <div class="amenity-overlay">
                         <h3>Genesis Global Community School</h3>
                         <p>Sekolah berkualitas dari TK hingga SMA dalam jarak 5-10 menit</p>
                     </div>
                 </div>
-
+    
                 <div class="amenity-card">
-                    <div class="amenity-image" style="background-image: url('./assets/acs.png')"></div>
+                    <div class="amenity-image">
+                        <img src="./assets/acs.png" alt="ACS School - Sekolah internasional dekat Park Serpong">
+                    </div>
                     <div class="amenity-overlay">
                         <h3>ACS School</h3>
                         <p>Sekolah berkualitas dari TK hingga SMA dalam jarak 5-10 menit</p>
                     </div>
                 </div>
-
+    
                 <div class="amenity-card">
-                    <div class="amenity-image" style="background-image: url('./assets/multimedia.png')"></div>
+                    <div class="amenity-image">
+                        <img src="./assets/multimedia.png" alt="Multimedia Nusantara School - Pendidikan kreatif dekat Park Serpong">
+                    </div>
                     <div class="amenity-overlay">
                         <h3>Multimedia Nusantara School</h3>
                         <p>Sekolah berkualitas dari TK hingga SMA dalam jarak 5-10 menit</p>
@@ -1227,7 +1249,9 @@
                 </div>
                 
                 <div class="amenity-card" id="kesehatan">
-                    <div class="amenity-image" style="background-image: url('./assets/kesehatan.jpeg')"></div>
+                    <div class="amenity-image">
+                        <img src="./assets/kesehatan.jpeg" alt="Fasilitas kesehatan - RS Mentari, RS Murni Asih, Mitra Keluarga, Siloam, Bethsaida">
+                    </div>
                     <div class="amenity-overlay">
                         <h3>Kesehatan</h3>
                         <p>Rumah sakit modern dan klinik terbaik dalam jarak dekat RS Mentari 2.2 km, RS Murni Asih 2.6 km, Mitra Keluarga Hospital 3.2 km, Siloam Hospital 4.2 km, Bethsaida Hospital 5.4 km</p>
@@ -1235,7 +1259,9 @@
                 </div>
                 
                 <div class="amenity-card" id="hiburan">
-                    <div class="amenity-image" style="background-image: url('./assets/pusatbelanja.png')"></div>
+                    <div class="amenity-image">
+                        <img src="./assets/pusatbelanja.png" alt="Pusat belanja dan hiburan dekat Park Serpong">
+                    </div>
                     <div class="amenity-overlay">
                         <h3>Belanja & Hiburan</h3>
                         <p>Pusat perbelanjaan, bioskop, dan restoran terbaik</p>
@@ -1243,7 +1269,9 @@
                 </div>
                 
                 <div class="amenity-card">
-                    <div class="amenity-image" style="background-image: url('./assets/zoo.png')"></div>
+                    <div class="amenity-image">
+                        <img src="./assets/zoo.png" alt="Rekreasi keluarga - Secret Zoo, Fun Pickleball, area bermain anak">
+                    </div>
                     <div class="amenity-overlay">
                         <h3>Rekreasi Keluarga</h3>
                         <p>Secret Zoo (2026), Fun Pickleball, dan area bermain anak</p>
@@ -1251,15 +1279,19 @@
                 </div>
                 
                 <div class="amenity-card" id="transportasi">
-                    <div class="amenity-image" style="background-image: url('./assets/mrt.png')"></div>
+                    <div class="amenity-image">
+                        <img src="./assets/mrt.png" alt="Transportasi - MRT Jakarta, Shuttle Bus, akses tol dekat Park Serpong">
+                    </div>
                     <div class="amenity-overlay">
                         <h3>Transportasi</h3>
                         <p>MRT Jakarta, Shuttle Bus, dan akses tol yang mudah</p>
                     </div>
                 </div>  
+    
             </div>
         </div>
     </section>
+    
     
     <!-- Consultation Section -->
     <section class="consultation" id="contact">
