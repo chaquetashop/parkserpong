@@ -7,70 +7,36 @@
         <meta name="description" content="Temukan Hi-5 Collection Park Serpong Tahap 5: pilihan rumah 2-3 lantai modern dengan desain inovatif dan fasilitas lengkap, mulai Rp 400 juta. Lokasi strategis dekat Gading Serpong.">
         <title>Park Serpong Tahap 5 - Hi Five Collection | Hunian Premium</title>
     
-        <!-- Minimal Critical CSS -->
-        <style>
-            /* Critical above-the-fold styles only */
-            :root { --header-h: 70px; }
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { 
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                overflow-x: hidden;
-            }
-            header {
-                background-color: rgba(255, 255, 255, 0.95);
-                position: fixed;
-                width: 100%;
-                top: 0;
-                z-index: 1000;
-            }
-            .header-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 15px 20px;
-            }
-            /* FOUC prevention */
-            body:not(.loaded) { visibility: hidden; }
-        </style>
-    
-        <!-- Preloads -->
-        <link rel="preload" href="./assets/fonts/fontello.woff2?12345678" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="./assets/css/style.css" as="style">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-    
-        <!-- Google Analytics -->
+        <!-- Google Tag (Analytics) -->
+        <link rel="preload" href="/assets/fonts/fontello.woff2?12345678" as="font" type="font/woff2" crossorigin="anonymous">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVHR663D9C"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-NVHR663D9C');
-            // Mark body as loaded when fonts are ready
-            document.fonts.ready.then(() => {
-                document.body.classList.add('loaded');
-            });
         </script>
-    
-        <!-- Non-Critical CSS (Load Asynchronously) -->
-        <link rel="stylesheet" href="./assets/css/fontello.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="./assets/css/style.css" media="print" onload="this.media='all'">
-        
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" media="print" onload="this.media='all'">
     
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="./assets/favicon_io/site.webmanifest" fetchpriority="low">
-    
-        <!-- NoJS Fallback -->
+        <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+
+        <!-- Google Fonts Optimization -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" media="print" onload="this.media='all'">
         <noscript>
-            <link rel="stylesheet" href="./assets/css/fontello.css">
-            <link rel="stylesheet" href="./assets/css/style.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap">
         </noscript>
-    </head>
+    
+        <!-- Fontello -->
+        <link rel="stylesheet" href="./assets/css/fontello.css">
+        <link rel="stylesheet" href="./assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
+</head>
 <body>
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/6285960239731?text=Halo%20saya%20ingin%20mengetahui%20lebih%20lanjut%20info%20mengenai%20rumah%20di%20park%20serpong%20tahap%205" 
