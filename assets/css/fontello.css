@@ -8,6 +8,7 @@
          url('../fonts/fontello.svg?12345678#fontello') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;  /* ← add this line */
   }
   
   [class^="icon-"]:before, [class*=" icon-"]:before {
