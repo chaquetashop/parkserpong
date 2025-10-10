@@ -260,16 +260,16 @@ nav ul li a:hover::after {
 
 
 .carousel-item-fase6:nth-child(1) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../fase6/fase6-teaser1.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../fase6/fase6-teaser1.webp');
 }
 .carousel-item-fase6:nth-child(2) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../fase6/fase6-teaser2.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../fase6/fase6-teaser2.webp');
 }
 .carousel-item-fase6:nth-child(3) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../fase6/fase6-teaser3.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../fase6/fase6-teaser3.webp');
 }
 .carousel-item-fase6:nth-child(4) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../fase6/fase6-teaser4.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../fase6/fase6-teaser4.webp');
 }
 
 
